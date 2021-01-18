@@ -36,7 +36,7 @@ jobs:
           push: true
           tags: user/app:latest
           secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.CR_PAT }} 
+            GIT_AUTH_TOKEN=${{ secrets.GIT_AUTH_TOKEN }} 
    
                      
       - name: Push image
