@@ -21,7 +21,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with: 
-          images: ghrc.io/Ramona84/rgapi
+          images: ghrc.io/ramona84/rgapi
           tag-sha: true
           tag-edge: false
           tag-latest: true
@@ -51,7 +51,7 @@ jobs:
             SNYK_TOKEN: ${{ secrets.SNYK }}
          with: 
              command: monitor 
-             image: "ghcr.io/Ramona84/rgapi:main"
+             image: "ghcr.io/ramona84/rgapi:main"
              args: --file=Dockerfile --project-name=rgapi 
              
        - name: Push image
