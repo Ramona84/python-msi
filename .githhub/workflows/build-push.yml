@@ -16,6 +16,10 @@ jobs:
     steps: 
       - name: Check out 
         uses: actions/checkout@v2
+        
+      - name: Docker meta
+        id: docker_meta
+        uses: crazy-max/ghaction-docker-meta@v1
         with: 
           images: ghrc.io/Ramona84/rgapi
           tag-sha: true
