@@ -49,11 +49,11 @@ jobs:
              command: monitor 
              image: "ghcr.io/Ramona84/rgapi:main"
              args: --file=Dockerfile --project-name=rgapi 
-          
-      - name: Push image
-        uses: docker/build-push-action@v2
-        with: 
+             
+       - name: Push image
+         uses: docker/build-push-action@v2
+         with:
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
-          file: ./Dockerfile 
-          
+          file: ./Dockerfile
+
